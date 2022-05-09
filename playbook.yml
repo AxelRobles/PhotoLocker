@@ -1,7 +1,9 @@
 ---
 - hosts: local
   connection: local
+  vars_files:
+    - vars/main.yml
   tasks:
     - name: Hello World!
       debug:
-        msg: "{{ hello }}"
+        msg: ${password_db}

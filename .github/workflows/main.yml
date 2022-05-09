@@ -33,6 +33,7 @@ jobs:
         with:
           # Required, playbook filepath
           playbook: playbook.yml
+          vault_password: ${{ secrets.VAULT_PASSWORD }}
           # Optional, directory where playbooks live
           directory: ./
           # Optional, literal inventory file contents
