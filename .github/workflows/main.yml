@@ -40,7 +40,13 @@ jobs:
           ls -a ${{ github.workspace }}
         shell: bash
 
-
+      # ansible-playbook secret.yml --vault-password-file=ansiblePassword.txt
+      - name: Delete file 
+        run: rm -f ansiblePassword.txt
+      
+      - name: Delete file 
+        run: ls -a
+        
       # Runs a set of commands using the runners shell
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
