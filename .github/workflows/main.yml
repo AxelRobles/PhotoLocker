@@ -32,7 +32,7 @@ jobs:
           touch ansiblePassword.txt
           echo ${{ secrets.SECRET_TEST }} >> ansiblePassword.txt
           cat ansiblePassword.txt
-          if [${{ secrets.SECRET_TEST }} == cat ansiblePassword.txt]; echo "Success!!!"; fi
+          if [${{ secrets.SECRET_TEST }} == cat ansiblePassword.txt]; then echo "Success!!!"; fi
           ls -a .
 
           echo "ls -a ${{ github.workspace }}"
