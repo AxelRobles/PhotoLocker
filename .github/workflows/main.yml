@@ -34,7 +34,7 @@ jobs:
           cat ansiblePassword.txt
           if [${{ secrets.SECRET_TEST }} == cat ansiblePassword.txt]; then echo "Success!!!"; fi
           ls -a .
-
+          cat ansiblePassword.txt
           echo "ls -a ${{ github.workspace }}"
           ls -a ${{ github.workspace }}
         shell: bash
