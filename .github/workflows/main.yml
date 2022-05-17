@@ -30,9 +30,9 @@ jobs:
       - name: Creating a file with content
         run: |
           touch ansiblePassword.txt
-          echo '${{ secrets.SECRET_TEST }}'  | base64 -d  > ansiblePassword.txt
+          echo '${{ secrets.SECRET_TEST }}' > ansiblePassword.txt
           cat ansiblePassword.txt
-          if [${{ secrets.SECRET_TEST }} == cat ansiblePassword.txt]; then echo "Success!!!"; fi
+          if [${{ secrets.SECRET_TEST }} == 'test']; then echo "Success!!!"; fi
           ls -a .
           cat ansiblePassword.txt
           echo "ls -a ${{ github.workspace }}"
