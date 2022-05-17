@@ -25,12 +25,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{ secrets.SECRET_TEST }}
+        run: echo '${{ secrets.SECRET_TEST }}'
       
       - name: Creating a file with content
         run: |
           touch ansiblePassword.txt
-          echo ${{ secrets.SECRET_TEST }} >> ansiblePassword.txt
+          echo '${{ secrets.SECRET_TEST }}' >> ansiblePassword.txt
           cat ansiblePassword.txt
           if [${{ secrets.SECRET_TEST }} == cat ansiblePassword.txt]; then echo "Success!!!"; fi
           ls -a .
