@@ -25,7 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo '${{ secrets.SECRET_TEST }}'  | base64 -d 
+        run: echo '${{ secrets.SECRET_TEST }}'
       
       - name: Creating a file with content
         run: |
