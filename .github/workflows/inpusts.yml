@@ -16,7 +16,7 @@ on:
         description: zip file name
         required: true
       version:
-       type: string
+        type: string
         description: zip file name
         required: true
       name:
