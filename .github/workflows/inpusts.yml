@@ -39,8 +39,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script  
         run: |
-              zip_source_path=ProHELPDESK/API/${{ github.event.inputs.name }}/${{ github.event.inputs.version }}/${{ github.event.inputs.zipfile }}
-              zip_qa_path=C:\\API\\DrugPricingApiLoyalty\\${{ github.event.inputs.zipfile }}
-              jq -n --arg zip_qa_path "$zip_qa_path"  --arg zip_source_path "$zip_source_path"  '{zip_qa_path: $zip_qa_path, zip_source_path: $zip_source_path}' > params.json
-              cat params.json
+            zip_source_path="ProHELPDESK/API/${{ github.event.inputs.name }}/${{ github.event.inputs.version }}/${{ github.event.inputs.zipfile }}"
+            zip_qa_path=C:\\API\\DrugPricingApiLoyalty\\${{ github.event.inputs.zipfile }}
+            jq -n --arg zip_qa_path "$zip_qa_path"  --arg zip_source_path "$zip_source_path"  '{zip_qa_path: $zip_qa_path, zip_source_path: $zip_source_path}' > params.json
+            cat params.json
               
